@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Destinations</h1>
+
+<h5>Use this to determine the weather in a city of your choice. </h5>
+
+<table>
+  <thead>
+    <tr>
+      <th>City name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destinations.each do |destination| %>
+      <tr>
+        <td><%= destination.city_name %></td>
+        <td><%= link_to 'Show', destination %></td>
+        <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
+        <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destination', new_destination_path %>

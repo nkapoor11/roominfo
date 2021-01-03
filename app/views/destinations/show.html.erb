@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Weather Information</h1>
+
+<p>
+  <strong>City name:</strong>
+  <%= @destination.city_name %>
+</p>
+
+
+
+<p>
+	<strong>Weather:</strong>
+	<%= @weather %>
+</p>
+
+<p>
+	<strong>Temperature:</strong>
+	<%= @min_temp %> to <%= @max_temp %>
+</p>
+
+
+<%= link_to 'Edit', edit_destination_path(@destination) %> |
+<%= link_to 'Back', destinations_path %>
